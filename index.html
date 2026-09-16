@@ -3,53 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Keihan Javadi - Software Engineer & Developer Portfolio. Explore projects, technical skills, and experience." />
+  <meta name="description" content="Keihan Javadi - Mechanical Engineering Graduate from Sharif University of Technology. Research in turbulent flow control, drag reduction, and molecular dynamics nanomechanics." />
   <meta name="author" content="Keihan Javadi" />
-  <meta name="theme-color" content="#0f172a" />
-  
+  <meta name="keywords" content="Keihan Javadi, Sharif University of Technology, Mechanical Engineering, Fluid Dynamics, Turbulence, Drag Reduction, Coherent Structures, Molecular Dynamics, LAMMPS, Nanomachines, 3D Printing, SLA" />
+  <meta name="theme-color" content="#060910" />
+
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Keihan Javadi | Portfolio" />
-  <meta property="og:description" content="Software Engineer & Developer. Passionate about building elegant, scalable software." />
+  <meta property="og:title" content="Keihan Javadi | Mechanical Engineer &amp; Researcher" />
+  <meta property="og:description" content="Sharif University of Technology B.Sc. in Mechanical Engineering. Research in coherent structures for drag reduction and molecular dynamics simulations." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://keihanjavadi.github.io/" />
 
-  <title>Keihan Javadi | Software Engineer & Developer</title>
+  <title>Keihan Javadi | Mechanical Engineer &amp; Researcher</title>
 
-  <!-- Google Fonts & Font Awesome Icons -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Background Ambient Glow -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
+  <!-- Coordinate Engineering Grid & Ambient Glows -->
+  <div class="eng-grid-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
 
   <!-- Header & Navigation -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#hero" class="brand-logo" aria-label="Home">
-        <span class="logo-code">&lt;</span>KJ<span class="logo-code"> /&gt;</span>
+      <a href="#hero" class="brand-logo" aria-label="Keihan Javadi Home">
+        <span class="logo-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+        <span class="logo-text">Keihan<strong>Javadi</strong></span>
+        <span class="logo-sub">Mech Eng</span>
       </a>
 
       <nav class="nav-links" id="nav-menu">
         <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#research" class="nav-link">Featured Research</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#skills" class="nav-link">Competencies</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Switcher -->
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle dark/light theme">
           <i class="fa-solid fa-moon theme-icon-dark"></i>
           <i class="fa-solid fa-sun theme-icon-light"></i>
         </button>
 
-        <!-- Mobile Menu Hamburger -->
+        <!-- CV / Thesis Quick Action -->
+        <a href="assets/docs/keihan_javadi_thesis.pdf" target="_blank" class="btn btn-sm btn-outline nav-cta-btn" title="Download Full Bachelor Thesis">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Thesis PDF</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
         <button id="hamburger-btn" class="icon-btn mobile-only" aria-label="Toggle navigation menu" aria-expanded="false">
           <i class="fa-solid fa-bars hamburger-icon"></i>
           <i class="fa-solid fa-xmark close-icon"></i>
@@ -62,47 +78,79 @@
     <!-- Hero Section -->
     <section class="section hero" id="hero">
       <div class="container hero-container">
-        <div class="hero-badge">
-          <span class="status-dot"></span>
-          <span>Available for new opportunities &amp; collaborations</span>
-        </div>
+        <div class="hero-content">
+          <!-- Institutional Badge -->
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-inst">Sharif University of Technology</span>
+            <span class="badge-sep">•</span>
+            <span class="badge-spec">B.Sc. Mechanical Engineering</span>
+          </div>
 
-        <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Keihan Javadi</span>
-        </h1>
+          <h1 class="hero-title">
+            Engineering the Physics of <br />
+            <span class="gradient-text">Flow &amp; Nanomachine Transport</span>
+          </h1>
 
-        <p class="hero-subtitle">
-          Software Engineer &amp; Developer
-        </p>
+          <p class="hero-lead">
+            Hi, I'm <strong>Keihan Javadi</strong>. I investigate <strong>turbulent coherent structures &amp; passive drag reduction</strong> in macro-channel flows, alongside <strong>molecular dynamics (LAMMPS) simulations</strong> of directed nanomachine mobility on engineered bimetallic surfaces.
+          </p>
 
-        <p class="hero-bio">
-          I design and build reliable, scalable software, intuitive web applications, and practical digital solutions. Dedicated to clean architecture, continuous learning, and great user experiences.
-        </p>
+          <!-- Core Metrics Strip -->
+          <div class="hero-metrics-strip">
+            <div class="metric-item">
+              <div class="metric-val"><span class="counter" data-target="28.6">28.6</span><span class="metric-unit">%</span></div>
+              <div class="metric-label">Peak Drag Reduction in Water Channel</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">+<span class="counter" data-target="71.0">71.0</span><span class="metric-unit">°</span></div>
+              <div class="metric-label">Contact Angle Jump (Cassie-Baxter)</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val"><span class="counter" data-target="6">6</span><span class="metric-unit"> Models</span></div>
+              <div class="metric-label">Molecular Nanomachines in LAMMPS (75–600 K)</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val"><span class="counter" data-target="16">16</span><span class="metric-unit">K SLA</span></div>
+              <div class="metric-label">Micro-scale Photopolymer 3D Fabrication</div>
+            </div>
+          </div>
 
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">
-            <span>Explore Projects</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <span>Get in Touch</span>
-            <i class="fa-regular fa-paper-plane"></i>
-          </a>
-          <a href="mailto:javadi.keihan@gmail.com" class="btn btn-ghost" title="Send email">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email Me</span>
-          </a>
-        </div>
+          <!-- Hero Action CTAs -->
+          <div class="hero-cta-group">
+            <a href="#research" class="btn btn-primary">
+              <i class="fa-solid fa-atom"></i>
+              <span>Explore Flagship Research</span>
+            </a>
+            <a href="assets/docs/keihan_javadi_thesis.pdf" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-book-open"></i>
+              <span>Bachelor Thesis (PDF)</span>
+            </a>
+            <a href="assets/docs/directional_nanomachine_transport_paper.pdf" target="_blank" class="btn btn-outline">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Elsevier Manuscript</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
 
-        <div class="hero-socials">
-          <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
-            <i class="fa-brands fa-github"></i>
-            <span>keihanjavadi</span>
-          </a>
-          <a href="mailto:javadi.keihan@gmail.com" class="social-link" aria-label="Email">
-            <i class="fa-solid fa-envelope"></i>
-            <span>javadi.keihan@gmail.com</span>
-          </a>
+          <!-- Quick Connect & Links -->
+          <div class="hero-quick-links">
+            <a href="mailto:Javadi.keihan@gmail.com" class="quick-link" title="Direct Email">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Javadi.keihan@gmail.com</span>
+            </a>
+            <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="quick-link" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+              <span>keihanjavadi</span>
+            </a>
+            <span class="quick-link location-link">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Tehran, Iran</span>
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -111,268 +159,615 @@
     <section class="section about" id="about">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Get to know me</p>
-          <h2 class="section-title">About Me</h2>
+          <p class="section-tag"><i class="fa-solid fa-user-graduate"></i> Academic Profile</p>
+          <h2 class="section-title">Bridging Macro Turbulence with Nanoscale Dynamics</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-content">
+          <div class="about-narrative">
             <p class="lead-text">
-              I am a passionate software developer who loves tackling complex problems and turning innovative ideas into robust, usable software.
+              As a Mechanical Engineering graduate from <strong>Sharif University of Technology</strong>, my work centers on the fundamental mechanics of fluids and surfaces across vastly different length scales.
             </p>
             <p>
-              My focus is on creating clean, efficient, and maintainable code. Whether building modern web applications, developing backend services, or exploring new technologies, I approach every challenge with curiosity, rigor, and a user-centered mindset.
+              At the macroscopic scale, I designed and fabricated an acrylic water channel flow loop from the ground up to investigate how <strong>near-wall turbulent coherent structures</strong> (quasi-streamwise vortices, ejections, and streaks) can be systematically manipulated using 16K SLA-printed passive microgrooves, achieving up to <strong>28.6% drag reduction</strong>.
             </p>
             <p>
-              Outside of coding, I'm constantly learning new frameworks, exploring open-source tools, and optimizing workflows to deliver high-quality digital experiences.
+              At the atomic scale, as first and corresponding author of our upcoming Elsevier research, I carry out extensive <strong>molecular dynamics (MD) simulations in LAMMPS</strong> to uncover how continuous lateral width gradients on bimetallic substrates rectify chaotic Brownian motion into directed, long-range transport for molecular nanomachines.
             </p>
+            <p>
+              I combine mathematical formulation, parametric CAD modeling (SolidWorks, OpenSCAD), high-precision additive manufacturing, and high-performance computing (LAMMPS, Python, MATLAB) to bridge theory with rigorous physical experiments.
+            </p>
+
+            <div class="about-highlights-row">
+              <div class="about-stat-box">
+                <span class="stat-number">Sharif</span>
+                <span class="stat-desc">Premier STEM University in Iran</span>
+              </div>
+              <div class="about-stat-box">
+                <span class="stat-number">1st Author</span>
+                <span class="stat-desc">Computational Nanotech Research</span>
+              </div>
+              <div class="about-stat-box">
+                <span class="stat-number">Viscous Sublayer</span>
+                <span class="stat-desc">Micro-Scale Hydrodynamic Scaling</span>
+              </div>
+            </div>
           </div>
 
-          <div class="highlights-grid">
-            <div class="highlight-card">
-              <div class="card-icon">
-                <i class="fa-solid fa-code"></i>
+          <!-- Academic & Focus Pillars Card -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-water"></i></div>
+              <div class="pillar-body">
+                <h3>Fluid Mechanics &amp; Turbulence Control</h3>
+                <p>Wall-bounded turbulence, Reynolds shear stress attenuation, viscous sublayer scaling ($h^+ < 5$), shark denticle biomimetics, and experimental duct flow instrumentation.</p>
               </div>
-              <h3>Clean Architecture</h3>
-              <p>Committed to readable, maintainable, and well-structured codebases.</p>
             </div>
 
-            <div class="highlight-card">
-              <div class="card-icon">
-                <i class="fa-solid fa-layer-group"></i>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-dna"></i></div>
+              <div class="pillar-body">
+                <h3>Molecular Dynamics &amp; Nanomechanics</h3>
+                <p>Thermally-driven molecular nanomachines, fullerene wheel dynamics (C36–C90), bimetallic Au/Ag interface energetics, and sliding-to-rolling transitions in LAMMPS.</p>
               </div>
-              <h3>Full-Stack Mindset</h3>
-              <p>Bridging responsive frontend user experiences with robust backend logic.</p>
             </div>
 
-            <div class="highlight-card">
-              <div class="card-icon">
-                <i class="fa-solid fa-bolt"></i>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-cube"></i></div>
+              <div class="pillar-body">
+                <h3>Precision Additive Manufacturing &amp; CAD</h3>
+                <p>High-resolution SLA 16K photopolymerization ($19\times24\,\mu\text{m}$), parametric OpenSCAD scripts, SolidWorks assemblies, and surface goniometry.</p>
               </div>
-              <h3>Performance First</h3>
-              <p>Optimizing web performance, load times, and responsive accessibility.</p>
             </div>
 
-            <div class="highlight-card">
-              <div class="card-icon">
-                <i class="fa-solid fa-rocket"></i>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-terminal"></i></div>
+              <div class="pillar-body">
+                <h3>Scientific Computing &amp; Data Pipeline</h3>
+                <p>Python (NumPy, SciPy, Matplotlib), VMD trajectory analysis, MATLAB image processing, Linux HPC environments, and LaTeX typesetting.</p>
               </div>
-              <h3>Continuous Growth</h3>
-              <p>Always expanding my toolkit with modern industry tools and best practices.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills & Technologies -->
-    <section class="section skills" id="skills">
+    <!-- Featured Research Section (Deep Dives) -->
+    <section class="section research" id="research">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Tech Stack</p>
-          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-tag"><i class="fa-solid fa-microscope"></i> Primary Research</p>
+          <h2 class="section-title">Flagship Research Projects</h2>
+          <p class="section-subtitle">In-depth experimental fluid dynamics and large-scale molecular dynamics simulations.</p>
         </div>
 
-        <div class="skills-wrapper">
-          <!-- Category 1: Languages -->
-          <div class="skill-category">
-            <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-              <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-              <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
-              <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3 / SCSS</span>
-              <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
-              <span class="skill-tag"><i class="fa-solid fa-c"></i> C / C++</span>
+        <!-- Flagship Project 1: Bachelor Thesis -->
+        <article class="featured-research-card" id="thesis-card">
+          <div class="research-header-strip">
+            <div class="project-tags">
+              <span class="tag-pill tag-primary"><i class="fa-solid fa-graduation-cap"></i> B.Sc. Thesis</span>
+              <span class="tag-pill">Sharif University of Technology</span>
+              <span class="tag-pill">Experimental Hydrodynamics</span>
+              <span class="tag-pill">16K SLA Fabrication</span>
+              <span class="tag-pill tag-accent"><i class="fa-solid fa-trophy"></i> Up to 28.6% Drag Reduction</span>
             </div>
+            <div class="research-meta-date">September 2026 • Advisor: Dr. Mousavi</div>
           </div>
 
-          <!-- Category 2: Frameworks & Libraries -->
-          <div class="skill-category">
-            <h3 class="category-title"><i class="fa-solid fa-cubes"></i> Frameworks &amp; Web Tech</h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-brands fa-react"></i> React</span>
-              <span class="skill-tag"><i class="fa-brands fa-node"></i> Node.js</span>
-              <span class="skill-tag"><i class="fa-solid fa-server"></i> Express / REST APIs</span>
-              <span class="skill-tag"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
-              <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+          <div class="featured-grid">
+            <!-- Left: Interactive Gallery Showcase -->
+            <div class="research-visual-col">
+              <div class="main-visual-frame" id="thesis-main-img-frame">
+                <img src="assets/images/bachelor-project/setup_cad.png" alt="CAD Assembly of Rectangular Water Channel Test Section" id="thesis-featured-img" class="lightbox-trigger" data-caption="CAD assembly of the precision rectangular water channel test section with modular recess plate." />
+                <div class="frame-overlay-badge">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Enlarge
+                </div>
+              </div>
+
+              <!-- Thumbnails Selector -->
+              <div class="thumbs-carousel" data-target="thesis-featured-img">
+                <button class="thumb-btn active" data-src="assets/images/bachelor-project/setup_cad.png" data-caption="CAD assembly of the precision rectangular water channel test section.">
+                  <img src="assets/images/bachelor-project/setup_cad.png" alt="CAD Rig" />
+                  <span>CAD Rig</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/bachelor-project/setup_photo_labeled.png" data-caption="Fabricated experimental flow loop at Sharif University of Technology with differential manometer taps.">
+                  <img src="assets/images/bachelor-project/setup_photo_labeled.png" alt="Flow Loop Photo" />
+                  <span>Flow Rig</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/bachelor-project/microgroove_profiles.png" data-caption="Dimensioned cross-sections of rectangular, triangular, and trapezoidal microgroove profiles.">
+                  <img src="assets/images/bachelor-project/microgroove_profiles.png" alt="Microgrooves" />
+                  <span>Profiles</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/bachelor-project/drag_reduction_acrylic.png" data-caption="Percentage drag reduction relative to smooth Acrylic reference plate across flow rates.">
+                  <img src="assets/images/bachelor-project/drag_reduction_acrylic.png" alt="Drag Reduction Plot" />
+                  <span>DR Plot</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/bachelor-project/contact_angle_rect.png" data-caption="Sessile drop goniometer measurement: Rectangular microgroove exhibits stable Cassie-Baxter state (θc = 119.9°).">
+                  <img src="assets/images/bachelor-project/contact_angle_rect.png" alt="Contact Angle Goniometry" />
+                  <span>Cassie State</span>
+                </button>
+              </div>
             </div>
+
+            <!-- Right: Technical Details & Metrics -->
+            <div class="research-info-col">
+              <h3 class="research-title">
+                Using Coherent Structures to Reduce Drag Force: Experimental Investigation of Passive Microgrooves &amp; Bio-Inspired Shark Denticles in Duct Flow
+              </h3>
+
+              <p class="research-abstract-summary">
+                Skin-friction drag in wall-bounded turbulent flows sustains massive energetic losses. This investigation fabricated a dedicated rectangular water channel ($w=51.2\,\text{mm}, h=6.4\,\text{mm}, D_h \approx 11.4\,\text{mm}$, aspect ratio $8$) operating at $Re_{D_h} = 7.2\times 10^3 - 1.7\times 10^4$ to systematically test 16K SLA-printed biomimetic shark denticles and microgrooves.
+              </p>
+
+              <div class="key-takeaways-box">
+                <h4><i class="fa-solid fa-chart-line"></i> Critical Experimental Discoveries</h4>
+                <ul>
+                  <li>
+                    <strong>Viscous Sublayer Confinement ($h_d^+ < 5$):</strong> Confining rectangular microgrooves ($w_g = 0.35\,\text{mm}, s=0.65\,\text{mm}, h_g = 0.20\,\text{mm}$) inside the viscous sublayer ($\delta_v \approx 57-121\,\mu\text{m}$) pinned quasi-streamwise vortices and damped crossflow fluctuations, yielding <strong>21.8% to 28.6% drag reduction</strong>.
+                  </li>
+                  <li>
+                    <strong>The Shark Denticle Penalty:</strong> Rigid full-height denticles ($180\,\mu\text{m}$) protruded into the buffer/log layer ($y^+ \approx 15-30$), inducing heavy form drag penalties (+25% to +35% pressure drop), proving the crucial necessity of flexible anchoring in living organisms.
+                  </li>
+                  <li>
+                    <strong>Cassie-Baxter Superhydrophobic State:</strong> Optical sessile drop goniometry revealed an apparent contact angle jump from $48.9^\circ$ (flat acrylic) to <strong>$119.9^\circ$</strong> (+71° jump!) purely by trapping micro-air plastrons in rectangular grooves.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="research-actions-bar">
+                <button class="btn btn-primary open-modal-btn" data-modal="modal-thesis">
+                  <i class="fa-solid fa-binoculars"></i>
+                  <span>Technical Deep Dive</span>
+                </button>
+                <a href="assets/docs/keihan_javadi_thesis.pdf" target="_blank" class="btn btn-secondary">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>Full Thesis (PDF)</span>
+                </a>
+                <a href="assets/docs/bachelor_presentation.pdf" target="_blank" class="btn btn-outline">
+                  <i class="fa-solid fa-person-chalkboard"></i>
+                  <span>Defense Deck (PDF)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Flagship Project 2: AMNT Elsevier Paper -->
+        <article class="featured-research-card" id="amnt-card">
+          <div class="research-header-strip">
+            <div class="project-tags">
+              <span class="tag-pill tag-primary"><i class="fa-solid fa-atom"></i> Research Paper</span>
+              <span class="tag-pill">First &amp; Corresponding Author</span>
+              <span class="tag-pill">Elsevier (cas-dc format)</span>
+              <span class="tag-pill">LAMMPS Molecular Dynamics</span>
+              <span class="tag-pill tag-accent"><i class="fa-solid fa-bolt"></i> Directed Nanomachine Transport</span>
+            </div>
+            <div class="research-meta-date">2026 Submission • Author: Keihan Javadi</div>
           </div>
 
-          <!-- Category 3: Tools & DevOps -->
-          <div class="skill-category">
-            <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Workflow</h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
-              <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub &amp; Pages</span>
-              <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-              <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux / CLI</span>
-              <span class="skill-tag"><i class="fa-solid fa-terminal"></i> PowerShell / Bash</span>
-              <span class="skill-tag"><i class="fa-solid fa-bug"></i> Debugging &amp; Testing</span>
+          <div class="featured-grid">
+            <!-- Left: Interactive Gallery Showcase -->
+            <div class="research-visual-col">
+              <div class="main-visual-frame" id="amnt-main-img-frame">
+                <img src="assets/images/amnt-project/nanocars_schematic.png" alt="Molecular Nanomachines with Fullerene Wheels" id="amnt-featured-img" class="lightbox-trigger" data-caption="Architectural schematics of diverse molecular nanomachines evaluated on bimetallic substrates." />
+                <div class="frame-overlay-badge">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Enlarge
+                </div>
+              </div>
+
+              <!-- Thumbnails Selector -->
+              <div class="thumbs-carousel" data-target="amnt-featured-img">
+                <button class="thumb-btn active" data-src="assets/images/amnt-project/nanocars_schematic.png" data-caption="Architectures of Nanocar, Miller nanocar, Nanotruck, Angled Nanocar, Nano-cooper, and Nano-caterpillar.">
+                  <img src="assets/images/amnt-project/nanocars_schematic.png" alt="Nanocars" />
+                  <span>Nanocars</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/amnt-project/fullerenes_schematic.png" data-caption="Fullerene wheels evaluated in the simulations: C36 (r=2.71Å), C50 (3.20Å), C60 (3.54Å), C76 (3.99Å), C80 (4.09Å), C90 (4.34Å).">
+                  <img src="assets/images/amnt-project/fullerenes_schematic.png" alt="Fullerenes" />
+                  <span>Fullerenes</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/amnt-project/bimetallic_tracks.png" data-caption="Bimetallic gold tracks on silver substrate: Zero Gradient (90°), Positive Gradient (45°), and Negative Gradient (135°).">
+                  <img src="assets/images/amnt-project/bimetallic_tracks.png" alt="Bimetallic Tracks" />
+                  <span>Substrates</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/amnt-project/displacement.png" data-caption="Center-of-mass trajectory displacement across thermal regimes (75 K to 600 K).">
+                  <img src="assets/images/amnt-project/displacement.png" alt="Displacement" />
+                  <span>Displacement</span>
+                </button>
+                <button class="thumb-btn" data-src="assets/images/amnt-project/effective_velocities.png" data-caption="Effective directional transport velocities comparing ZG, PG, and NG surfaces.">
+                  <img src="assets/images/amnt-project/effective_velocities.png" alt="Velocities" />
+                  <span>Kinematics</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Technical Details & Metrics -->
+            <div class="research-info-col">
+              <h3 class="research-title">
+                Directional Transport and Geometric Confinement of Molecular Nanomachines on Bimetallic Width-Gradient Substrates
+              </h3>
+
+              <p class="research-abstract-summary">
+                Controlling the diffusive motion of synthetic molecular nanomachines remains a premier frontier in nanotechnology and targeted nanomedicine. This study utilized classical molecular dynamics (LAMMPS, NVT canonical ensemble, Nosé-Hoover thermostat, Velocity-Verlet, 1 fs step) to evaluate 6 distinct nanomachine architectures on bimetallic Au/Ag width-gradient substrates across 75 K to 600 K.
+              </p>
+
+              <div class="key-takeaways-box">
+                <h4><i class="fa-solid fa-microchip"></i> Key Simulation &amp; Theoretical Breakthroughs</h4>
+                <ul>
+                  <li>
+                    <strong>Rectification via Negative Width Gradients (NG):</strong> While uniform (ZG) and diverging (PG) gold tracks suffer from severe lateral wander, the converging negative gradient (NG, 135°) suppresses angular velocity and rectifies Brownian diffusion into directed, long-range transport.
+                  </li>
+                  <li>
+                    <strong>Sliding-to-Rolling Dynamics:</strong> Thermal excitation initiates a distinct mechanical transition from atomic sliding to pure rolling. On NG surfaces, geometric confinement drives early transition and preserves directional stability up to 600 K.
+                  </li>
+                  <li>
+                    <strong>Structural Flexibility vs. Rigidity:</strong> Lightweight, flexible chassis excel in cryogenic/low-temperature regimes (75–150 K), whereas structurally balanced, rigid configurations dominate high-temperature environments.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="research-actions-bar">
+                <button class="btn btn-primary open-modal-btn" data-modal="modal-amnt">
+                  <i class="fa-solid fa-binoculars"></i>
+                  <span>Technical Deep Dive</span>
+                </button>
+                <a href="assets/docs/directional_nanomachine_transport_paper.pdf" target="_blank" class="btn btn-secondary">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>Manuscript (PDF)</span>
+                </a>
+                <button class="btn btn-outline copy-citation-btn" data-citation="Javadi, K. (2026). Directional Transport and Geometric Confinement of Molecular Nanomachines on Bimetallic Width-Gradient Substrates. Elsevier cas-dc.">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy Citation</span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Additional Projects & Engineering Work -->
     <section class="section projects" id="projects">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Featured Work</p>
-          <h2 class="section-title">Projects Showcase</h2>
+          <p class="section-tag"><i class="fa-solid fa-laptop-code"></i> Engineering Portfolio</p>
+          <h2 class="section-title">Design, Simulation &amp; Fabrication Projects</h2>
         </div>
 
         <!-- Filter tabs -->
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web Apps</button>
-          <button class="filter-btn" data-filter="tools">Tools &amp; Systems</button>
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fluids">Fluid Dynamics &amp; CFD</button>
+          <button class="filter-btn" data-filter="nano">Molecular Dynamics &amp; Nanotech</button>
+          <button class="filter-btn" data-filter="cad">CAD &amp; 3D Fabrication</button>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card" data-category="web">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <i class="fa-regular fa-folder"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/keihanjavadi/keihanjavadi.github.io" target="_blank" rel="noopener noreferrer" title="View Source on GitHub" class="icon-link">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://keihanjavadi.github.io" target="_blank" rel="noopener noreferrer" title="Open Live Site" class="icon-link">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
+          <!-- Card 1: Water Channel Rig -->
+          <div class="project-card" data-category="fluids">
+            <div class="card-img-top">
+              <img src="assets/images/bachelor-project/setup_photo_labeled.png" alt="Experimental Flow Channel Rig" class="lightbox-trigger" data-caption="Fabricated acrylic water channel test facility with differential manometry." />
+              <div class="card-category-badge">Fluid Dynamics</div>
             </div>
-            <h3 class="project-title">Personal Developer Portfolio</h3>
-            <p class="project-desc">
-              A modern, high-performance static portfolio website deployed with GitHub Pages. Features dynamic theme switching, fluid mobile layout, and zero runtime dependencies.
-            </p>
-            <div class="project-tech">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>GitHub Pages</span>
+            <div class="card-body">
+              <h3 class="card-title">Precision Rectangular Water Channel Test Loop</h3>
+              <p class="card-desc">
+                Designed, modeled in SolidWorks, and assembled an acrylic water channel ($w=51.2\,\text{mm}, h=6.4\,\text{mm}$) with hydraulic diameter $D_h \approx 11.4\,\text{mm}$ to test wall shear stress attenuation up to $Re \approx 1.7\times 10^4$.
+              </p>
+              <div class="tech-stack-pills">
+                <span>SolidWorks</span>
+                <span>Acrylic Machining</span>
+                <span>Hydraulic Testing</span>
+                <span>U-Tube Manometry</span>
+              </div>
+              <div class="card-footer-links">
+                <a href="#thesis-card" class="card-link"><i class="fa-solid fa-arrow-right"></i> View in Thesis</a>
+              </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card" data-category="web">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <i class="fa-regular fa-folder"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" title="View GitHub" class="icon-link">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
+          <!-- Card 2: 16K SLA 3D Printing -->
+          <div class="project-card" data-category="cad">
+            <div class="card-img-top">
+              <img src="assets/images/bachelor-project/microgroove_profiles.png" alt="OpenSCAD Parametric Microgrooves" class="lightbox-trigger" data-caption="Parametric OpenSCAD microgroove models printed via 16K SLA." />
+              <div class="card-category-badge">CAD &amp; 3D Printing</div>
             </div>
-            <h3 class="project-title">Full-Stack Web Application</h3>
-            <p class="project-desc">
-              An interactive web application featuring clean state management, modular RESTful APIs, secure user data handling, and an intuitive user interface.
-            </p>
-            <div class="project-tech">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>Database</span>
+            <div class="card-body">
+              <h3 class="card-title">Sublayer Microgroove Fabrication via 16K SLA</h3>
+              <p class="card-desc">
+                Formulated OpenSCAD parametric scripts to generate continuous arrays of rectangular, triangular, and trapezoidal riblets with $19\times24\,\mu\text{m}$ resolution on an Elegoo Saturn 4 Ultra 16K photopolymer printer.
+              </p>
+              <div class="tech-stack-pills">
+                <span>OpenSCAD</span>
+                <span>Elegoo Saturn 4 Ultra</span>
+                <span>Resin Printing</span>
+                <span>Goniometry</span>
+              </div>
+              <div class="card-footer-links">
+                <a href="#thesis-card" class="card-link"><i class="fa-solid fa-arrow-right"></i> View Geometries</a>
+              </div>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card" data-category="tools">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <i class="fa-regular fa-folder"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" title="View GitHub" class="icon-link">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
+          <!-- Card 3: Molecular Nanocar Simulations -->
+          <div class="project-card" data-category="nano">
+            <div class="card-img-top">
+              <img src="assets/images/amnt-project/fullerenes_schematic.png" alt="Fullerene Nanomachine Wheels" class="lightbox-trigger" data-caption="Molecular modeling of fullerene wheels and bimetallic interfaces." />
+              <div class="card-category-badge">Molecular Dynamics</div>
             </div>
-            <h3 class="project-title">Developer Utilities &amp; Automation</h3>
-            <p class="project-desc">
-              A collection of scripts and automation utilities for streamlining developer workflows, file processing, and productivity enhancement.
-            </p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>CLI</span>
-              <span>Automation</span>
-              <span>Git</span>
+            <div class="card-body">
+              <h3 class="card-title">LAMMPS Nanomachine Mobility Modeling</h3>
+              <p class="card-desc">
+                Constructed canonical ensemble (NVT) MD simulations incorporating EAM alloy potentials for Au/Ag substrates and MM/OPLS force fields for synthetic nanomachines across cryogenic to high-temperature regimes (75–600 K).
+              </p>
+              <div class="tech-stack-pills">
+                <span>LAMMPS</span>
+                <span>VMD</span>
+                <span>EAM Potentials</span>
+                <span>Nosé-Hoover</span>
+              </div>
+              <div class="card-footer-links">
+                <a href="#amnt-card" class="card-link"><i class="fa-solid fa-arrow-right"></i> View Paper Details</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="more-projects-box">
-          <p>Looking for more repositories and open source contributions?</p>
-          <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <i class="fa-brands fa-github"></i>
-            <span>Visit my GitHub Profile</span>
-          </a>
+          <!-- Card 4: Goniometric Wettability & Hydrophobic Transitions -->
+          <div class="project-card" data-category="fluids">
+            <div class="card-img-top">
+              <img src="assets/images/bachelor-project/contact_angle_rect.png" alt="Sessile Drop Goniometer" class="lightbox-trigger" data-caption="Contact angle goniometry demonstrating Cassie-Baxter state on rectangular grooves." />
+              <div class="card-category-badge">Interfacial Phenomena</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sessile Drop Surface Goniometry &amp; Wetting</h3>
+              <p class="card-desc">
+                Conducted optical sessile drop experiments using deionized water to measure apparent contact angles. Validated Cassie-Baxter air plastron trapping causing an apparent $+71^\circ$ hydrophobic increase on rectangular grooves.
+              </p>
+              <div class="tech-stack-pills">
+                <span>Goniometry</span>
+                <span>Cassie-Baxter Model</span>
+                <span>Microtextures</span>
+                <span>Surface Energetics</span>
+              </div>
+              <div class="card-footer-links">
+                <a href="#thesis-card" class="card-link"><i class="fa-solid fa-arrow-right"></i> View Contact Angle Data</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
+    <!-- Publications & Academic Dissemination -->
+    <section class="section publications" id="publications">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Let's Connect</p>
-          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-tag"><i class="fa-solid fa-scroll"></i> Academic Output</p>
+          <h2 class="section-title">Publications &amp; Theses</h2>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Let's build something together</h3>
-            <p>
-              I am open to new career opportunities, interesting freelance projects, and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
+        <div class="publications-list">
+          <!-- Publication 1 -->
+          <div class="pub-card">
+            <div class="pub-status-badge badge-submitted">
+              <i class="fa-solid fa-clock-rotate-left"></i> Submitted / Under Review
+            </div>
+            <h3 class="pub-title">Directional Transport and Geometric Confinement of Molecular Nanomachines on Bimetallic Width-Gradient Substrates</h3>
+            <p class="pub-authors">
+              <strong>Keihan Javadi</strong> (First &amp; Corresponding Author)
             </p>
-
-            <div class="contact-methods">
-              <a href="mailto:javadi.keihan@gmail.com" class="contact-method-card">
-                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div class="method-details">
-                  <span class="method-label">Direct Email</span>
-                  <span class="method-value">javadi.keihan@gmail.com</span>
-                </div>
+            <p class="pub-venue">
+              <em>Prepared for Elsevier publication (cas-dc double-column format).</em>
+            </p>
+            <p class="pub-summary">
+              Investigates six distinct nanomachine architectures on bimetallic gold-on-silver substrates featuring continuous positive, zero, and negative width gradients from 75 K to 600 K via classical LAMMPS molecular dynamics simulations.
+            </p>
+            <div class="pub-actions">
+              <a href="assets/docs/directional_nanomachine_transport_paper.pdf" target="_blank" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-file-pdf"></i> Read PDF
               </a>
-
-              <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="contact-method-card">
-                <div class="method-icon"><i class="fa-brands fa-github"></i></div>
-                <div class="method-details">
-                  <span class="method-label">GitHub</span>
-                  <span class="method-value">github.com/keihanjavadi</span>
-                </div>
-              </a>
+              <button class="btn btn-sm btn-outline copy-bibtex-btn" data-bibtex="@article{javadi2026directional,
+  title={Directional Transport and Geometric Confinement of Molecular Nanomachines on Bimetallic Width-Gradient Substrates},
+  author={Javadi, Keihan},
+  journal={Elsevier Applied Materials},
+  year={2026}
+}">
+                <i class="fa-regular fa-copy"></i> Copy BibTeX
+              </button>
             </div>
           </div>
 
-          <!-- Quick Message Box -->
-          <div class="contact-card">
-            <h4>Send a Quick Note</h4>
-            <form id="contact-form" action="mailto:javadi.keihan@gmail.com" method="get" enctype="text/plain">
-              <div class="form-group">
-                <label for="contact-name">Your Name</label>
-                <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+          <!-- Publication 2 -->
+          <div class="pub-card">
+            <div class="pub-status-badge badge-completed">
+              <i class="fa-solid fa-check"></i> Defended &amp; Approved
+            </div>
+            <h3 class="pub-title">Using Coherent Structures to Reduce Drag Force: Experimental Investigation of Passive Microgrooves &amp; Bio-Inspired Shark Denticles in Duct Flow</h3>
+            <p class="pub-authors">
+              <strong>Keihan Javadi</strong> (Candidate) • <strong>Dr. Mousavi</strong> (Supervisor)
+            </p>
+            <p class="pub-venue">
+              <em>Bachelor's Thesis, Faculty of Mechanical Engineering, Sharif University of Technology, Tehran, Iran (September 2026).</em>
+            </p>
+            <p class="pub-summary">
+              Demonstrates up to 28.6% turbulent drag reduction in a custom rectangular water channel using 16K SLA-printed rectangular microgrooves, analyzing near-wall coherent structures and viscous sublayer confinement ($h_d^+ < 5$).
+            </p>
+            <div class="pub-actions">
+              <a href="assets/docs/keihan_javadi_thesis.pdf" target="_blank" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-book"></i> Read Full Thesis
+              </a>
+              <a href="assets/docs/bachelor_presentation.pdf" target="_blank" class="btn btn-sm btn-secondary">
+                <i class="fa-solid fa-file-powerpoint"></i> View Presentation
+              </a>
+              <button class="btn btn-sm btn-outline copy-bibtex-btn" data-bibtex="@thesis{javadi2026coherent,
+  title={Using Coherent Structures to Reduce Drag Force: Experimental Investigation of Passive Microgrooves and Bio-Inspired Shark Denticles in Duct Flow},
+  author={Javadi, Keihan},
+  supervisor={Dr. Mousavi},
+  school={Sharif University of Technology, Department of Mechanical Engineering},
+  address={Tehran, Iran},
+  year={2026},
+  month={September},
+  type={Bachelor's Thesis}
+}">
+                <i class="fa-regular fa-copy"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Competencies -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag"><i class="fa-solid fa-gears"></i> Core Toolkit</p>
+          <h2 class="section-title">Technical Competencies &amp; Domain Mastery</h2>
+        </div>
+
+        <div class="skills-grid-modern">
+          <!-- Domain 1: Fluids & Aerodynamics -->
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <div class="skill-box-icon"><i class="fa-solid fa-water"></i></div>
+              <h3>Fluid Mechanics &amp; Turbulence</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li><i class="fa-solid fa-chevron-right"></i> Wall-Bounded Turbulence &amp; Boundary Layer Dynamics</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Near-Wall Coherent Structures (Quasi-Streamwise Vortices, Ejections/Sweeps)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Viscous Sublayer Scaling ($\delta_v = 5\nu/u_\tau, h^+ < 5$)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Channel &amp; Internal Duct Flow Hydraulic Calculations</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Differential Pressure Manometry &amp; Flow Calibration</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Sessile Drop Goniometry &amp; Cassie-Baxter Wetting</li>
+            </ul>
+          </div>
+
+          <!-- Domain 2: Molecular Dynamics -->
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <div class="skill-box-icon"><i class="fa-solid fa-atom"></i></div>
+              <h3>Molecular Dynamics &amp; Nanotech</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li><i class="fa-solid fa-chevron-right"></i> LAMMPS Molecular Dynamics Simulator</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Visual Molecular Dynamics (VMD) &amp; Trajectory Post-Processing</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Ensembles: NVT Canonical, NPT, Nosé-Hoover Thermostats</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Interatomic Potentials (EAM Alloy, Lennard-Jones 12-6, OPLS/MM)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Mean Squared Displacement (MSD) &amp; Kinematic Rectification</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Nanomachines, Fullerenes (C36–C90), and Bimetallic Interfaces</li>
+            </ul>
+          </div>
+
+          <!-- Domain 3: CAD & Precision Manufacturing -->
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <div class="skill-box-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+              <h3>CAD &amp; Precision Manufacturing</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li><i class="fa-solid fa-chevron-right"></i> SolidWorks (3D Part Modeling, Complex Assembly, GD&amp;T Drawings)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> OpenSCAD (Parametric Mathematical Geometry Generation)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> High-Resolution 16K SLA Photopolymer 3D Printing ($19\times24\,\mu\text{m}$)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Meshmixer (Mesh Repair, Slicing, Surface Optimization)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Fluidic Rig Prototyping (Acrylic Channel Fabrication, O-Ring Sealing)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Biomimetic Geometry Synthesis (Shark Denticle Arrays)</li>
+            </ul>
+          </div>
+
+          <!-- Domain 4: Computational & Programming -->
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <div class="skill-box-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Scientific Computing &amp; Tools</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li><i class="fa-solid fa-chevron-right"></i> Python (NumPy, SciPy, Matplotlib, Automated Data Pipelines)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> MATLAB (Numerical Computing, Image Analysis, Signal Filtering)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> C# / Object-Oriented Software Design</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Linux / Ubuntu HPC Environments &amp; Bash Scripting</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Git, GitHub &amp; Version-Controlled Research</li>
+              <li><i class="fa-solid fa-chevron-right"></i> LaTeX &amp; Beamer (Peer-Reviewed Academic Typesetting)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Collaboration Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag"><i class="fa-solid fa-paper-plane"></i> Connect</p>
+          <h2 class="section-title">Let's Discuss Research &amp; Opportunities</h2>
+          <p class="section-subtitle">Interested in academic collaboration, graduate research opportunities, or technical inquiries? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info-cards">
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-details">
+                <h4>Direct Email</h4>
+                <a href="mailto:Javadi.keihan@gmail.com" class="contact-value">Javadi.keihan@gmail.com</a>
+                <span class="contact-sub">Responses typically within 24 hours</span>
+              </div>
+              <button class="copy-btn icon-btn" data-copy="Javadi.keihan@gmail.com" title="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-details">
+                <h4>GitHub Profile</h4>
+                <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/keihanjavadi</a>
+                <span class="contact-sub">Open-source code, simulations &amp; websites</span>
+              </div>
+              <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Open GitHub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <!-- Academic Affiliation Card -->
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="contact-details">
+                <h4>Institution</h4>
+                <span class="contact-value">Sharif University of Technology</span>
+                <span class="contact-sub">Department of Mechanical Engineering • Tehran, Iran</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Direct Message Form (Mailto Generator) -->
+          <div class="contact-form-panel">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="e.g. Dr. Alex Smith" required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Your Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="e.g. alex@university.edu" required />
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="contact-subject">Subject</label>
-                <input type="text" id="contact-subject" name="subject" placeholder="Project collaboration / Inquiry" required />
+                <label for="contact-subject">Inquiry Subject</label>
+                <input type="text" id="contact-subject" name="subject" placeholder="e.g. Graduate Research / Drag Reduction Project Inquiry" required />
               </div>
 
               <div class="form-group">
                 <label for="contact-body">Message</label>
-                <textarea id="contact-body" name="body" rows="4" placeholder="Hello Keihan, I would like to discuss..." required></textarea>
+                <textarea id="contact-body" name="body" rows="5" placeholder="Share your message, inquiry, or potential collaboration..." required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block">
-                <span>Open in Email Client</span>
-                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Open Mail Client</span>
               </button>
             </form>
           </div>
@@ -381,18 +776,496 @@
     </section>
   </main>
 
+  <!-- Technical Deep Dive Modal: Bachelor Thesis -->
+  <div class="modal-backdrop" id="modal-thesis" aria-hidden="true" role="dialog" aria-labelledby="modal-thesis-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge"><i class="fa-solid fa-graduation-cap"></i> Sharif University of Technology B.Sc. Thesis</span>
+          <h2 class="modal-title" id="modal-thesis-title">Using Coherent Structures to Reduce Drag Force</h2>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Tabs Navigation -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="thesis-tab-overview">Overview &amp; Abstract</button>
+        <button class="modal-tab-btn" data-tab="thesis-tab-facility">Channel Facility &amp; Scaling</button>
+        <button class="modal-tab-btn" data-tab="thesis-tab-results">Experimental Data &amp; Results</button>
+        <button class="modal-tab-btn" data-tab="thesis-tab-gallery">High-Res Schematics</button>
+        <button class="modal-tab-btn" data-tab="thesis-tab-docs">Documents &amp; Citation</button>
+      </div>
+
+      <div class="modal-content-body">
+        <!-- Tab 1: Overview -->
+        <div class="modal-tab-pane active" id="thesis-tab-overview">
+          <h3>The Physical Problem</h3>
+          <p>
+            Skin-friction drag in wall-bounded turbulent flows is a primary energy drain across aeronautical, marine, and pipe transport systems. Near-wall turbulence is driven by a self-sustaining cycle: elongated quasi-streamwise vortices inclined at $8^\circ{-}10^\circ$ ($y^+ \approx 10{-}40$), low-speed fluid streaks ($\lambda^+ \approx 100$), and energetic sweep ($Q_4$) and ejection ($Q_2$) events that steepen wall shear stress:
+          </p>
+          <div class="math-callout">
+            $$\tau_{\text{turb}} = -\rho \overline{u' v'} > 0$$
+          </div>
+          <p>
+            This project investigated whether microstructured surfaces could mechanically suppress these quasi-streamwise vortices and lift turbulent ejections away from the surface without suffering the detrimental form drag that plagues macroscopic roughness.
+          </p>
+
+          <h3>Key Breakthroughs</h3>
+          <div class="modal-stats-grid">
+            <div class="modal-stat-card">
+              <span class="m-val">28.6%</span>
+              <span class="m-lbl">Peak Drag Reduction vs. Acrylic Reference</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">28.4%</span>
+              <span class="m-lbl">Peak Drag Reduction vs. Aluminum Reference</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">119.9°</span>
+              <span class="m-lbl">Contact Angle (Cassie-Baxter Superhydrophobic)</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">&lt; 5</span>
+              <span class="m-lbl">Dimensionless Sublayer Confinement ($h^+$)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Facility & Scaling -->
+        <div class="modal-tab-pane" id="thesis-tab-facility">
+          <h3>Experimental Channel Facility Specifications</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Symbol / Value</th>
+                <th>Physical Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Working Fluid</td>
+                <td>Water ($T=30^\circ\text{C}, \rho=996\,\text{kg/m}^3, \nu=0.801\times10^{-6}\,\text{m}^2/\text{s}$)</td>
+                <td>Low kinematic viscosity for turbulent flow</td>
+              </tr>
+              <tr>
+                <td>Channel Dimensions</td>
+                <td>$w = 51.2\,\text{mm}, h = 6.4\,\text{mm}$</td>
+                <td>Aspect ratio $w/h = 8$</td>
+              </tr>
+              <tr>
+                <td>Hydraulic Diameter</td>
+                <td>$D_h = \frac{4A}{P_w} \approx 11.38\,\text{mm}$</td>
+                <td>Modified hydraulic scaling base</td>
+              </tr>
+              <tr>
+                <td>Flow Rates Tested</td>
+                <td>$Q = 0.6, 1.0, 1.4\,\text{m}^3/\text{h}$</td>
+                <td>Bulk velocity $U_b = 0.51{-}1.18\,\text{m/s}$</td>
+              </tr>
+              <tr>
+                <td>Reynolds Range</td>
+                <td>$Re_{D_h} = 6.8\times 10^3 {-} 1.68\times 10^4$</td>
+                <td>Fully developed turbulent regime</td>
+              </tr>
+              <tr>
+                <td>Viscous Sublayer</td>
+                <td>$\delta_v = 5\nu / u_\tau \approx 57 - 121\,\mu\text{m}$</td>
+                <td>Design criterion for riblet height ($h_d^+ < 5$)</td>
+              </tr>
+              <tr>
+                <td>Fabrication Tool</td>
+                <td>Elegoo Saturn 4 Ultra 16K SLA Printer</td>
+                <td>$19\times24\,\mu\text{m}$ pixel resolution in resin</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Why Viscous Sublayer Confinement ($h_d^+ < 5$) Matters</h3>
+          <p>
+            Classical boundary layer theory dictates that within $y^+ < 5$, viscous damping dominates. If microgrooves or denticles remain submerged strictly within this layer, they impede spanwise crossflow fluctuations ($w'$) and prevent quasi-streamwise vortices from sweeping down to the wall. Conversely, when denticles extended into the buffer zone ($y^+ \approx 15-30$), they operated as bluff bodies, generating localized separation and massive 25%–35% form drag penalties.
+          </p>
+        </div>
+
+        <!-- Tab 3: Results -->
+        <div class="modal-tab-pane" id="thesis-tab-results">
+          <h3>Comprehensive Drag Reduction Benchmark</h3>
+          <p>Differential pressure drops ($\Delta h$) acquired via U-tube manometry across test specimens:</p>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Surface Texture</th>
+                <th>Orientation</th>
+                <th>$Q = 0.6\,\text{m}^3/\text{h}$</th>
+                <th>$Q = 1.0\,\text{m}^3/\text{h}$</th>
+                <th>$Q = 1.4\,\text{m}^3/\text{h}$</th>
+                <th>Mean DR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Rectangular Microgrooves</strong></td>
+                <td>Streamwise ($\parallel$)</td>
+                <td><strong>+22.6%</strong></td>
+                <td><strong>+25.8%</strong></td>
+                <td><strong>+28.6%</strong></td>
+                <td><strong>+25.7% (Optimal)</strong></td>
+              </tr>
+              <tr>
+                <td>Triangular Riblets ($60^\circ$)</td>
+                <td>Streamwise ($\parallel$)</td>
+                <td>+2.9%</td>
+                <td>+8.2%</td>
+                <td>+15.8%</td>
+                <td>+9.0%</td>
+              </tr>
+              <tr>
+                <td>Trapezoidal Microgrooves</td>
+                <td>Streamwise ($\parallel$)</td>
+                <td>+11.4%</td>
+                <td>+14.7%</td>
+                <td>+18.2%</td>
+                <td>+14.8%</td>
+              </tr>
+              <tr class="negative-row">
+                <td>Rectangular Microgrooves</td>
+                <td>Perpendicular ($\perp$)</td>
+                <td>-28.5%</td>
+                <td>-33.1%</td>
+                <td>-41.2%</td>
+                <td>-34.3% (Form Drag Penalty)</td>
+              </tr>
+              <tr class="negative-row">
+                <td>Full-Scale Shark Denticles (1.0x)</td>
+                <td>Aligned</td>
+                <td>-19.4%</td>
+                <td>-26.8%</td>
+                <td>-35.2%</td>
+                <td>-27.1% (Buffer Protrusion)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Wettability &amp; Cassie-Baxter Transition</h3>
+          <p>
+            Rectangular microgrooves elevated the apparent contact angle from $48.9^\circ$ to $119.9^\circ$. The trapped air pocket within the microgroove grooves creates a shear-free liquid-gas interface (slip boundary condition), reducing contact area and further mitigating wall shear stress.
+          </p>
+        </div>
+
+        <!-- Tab 4: Gallery -->
+        <div class="modal-tab-pane" id="thesis-tab-gallery">
+          <div class="modal-gallery-grid">
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/setup_cad.png" alt="CAD Loop Assembly" class="lightbox-trigger" data-caption="3D CAD Assembly of rectangular test section with modular test-plate recess." />
+              <span>CAD Loop Assembly</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/setup_photo_labeled.png" alt="Fabricated Test Rig" class="lightbox-trigger" data-caption="Fabricated flow loop with differential manometer taps at Sharif University of Technology." />
+              <span>Fabricated Test Rig</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/microgroove_profiles.png" alt="Microgroove Dimensioned Profiles" class="lightbox-trigger" data-caption="Dimensioned cross-sections of rectangular, triangular, and trapezoidal riblets." />
+              <span>Dimensioned Profiles</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/drag_reduction_acrylic.png" alt="Drag Reduction Benchmark" class="lightbox-trigger" data-caption="Percentage drag reduction relative to smooth Acrylic reference plate." />
+              <span>Drag Reduction Benchmark</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/contact_angle_flat.png" alt="Flat Acrylic Contact Angle" class="lightbox-trigger" data-caption="Flat Acrylic: θc = 48.9° (Naturally hydrophilic)." />
+              <span>Flat Acrylic ($\theta = 48.9^\circ$)</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/bachelor-project/contact_angle_rect.png" alt="Rectangular Microgroove Contact Angle" class="lightbox-trigger" data-caption="Rectangular Microgrooves: θc = 119.9° (Stable Cassie-Baxter superhydrophobic state)." />
+              <span>Rectangular Microgrooves ($\theta = 119.9^\circ$)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Documents & Citation -->
+        <div class="modal-tab-pane" id="thesis-tab-docs">
+          <h3>Official Academic Documents</h3>
+          <div class="doc-download-cards">
+            <div class="doc-card">
+              <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Complete Bachelor Thesis (PDF)</h4>
+                <p>Full 100+ page dissertation with comprehensive literature review, dimensionless mathematical derivations, calibration data, and thesis defense findings.</p>
+                <a href="assets/docs/keihan_javadi_thesis.pdf" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Thesis (9.3 MB)
+                </a>
+              </div>
+            </div>
+
+            <div class="doc-card">
+              <div class="doc-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+              <div class="doc-info">
+                <h4>Defense Presentation Deck (PDF)</h4>
+                <p>LaTeX Beamer slide deck presented to the examining faculty committee at Sharif University of Technology.</p>
+                <a href="assets/docs/bachelor_presentation.pdf" target="_blank" class="btn btn-sm btn-secondary">
+                  <i class="fa-solid fa-download"></i> Download Presentation (6.2 MB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h3>BibTeX Citation</h3>
+          <pre class="code-block"><code>@thesis{javadi2026coherent,
+  title={Using Coherent Structures to Reduce Drag Force: Experimental Investigation of Passive Microgrooves and Bio-Inspired Shark Denticles in Duct Flow},
+  author={Javadi, Keihan},
+  supervisor={Dr. Mousavi},
+  school={Sharif University of Technology, Department of Mechanical Engineering},
+  address={Tehran, Iran},
+  year={2026},
+  month={September},
+  type={Bachelor's Thesis}
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Deep Dive Modal: AMNT Elsevier Paper -->
+  <div class="modal-backdrop" id="modal-amnt" aria-hidden="true" role="dialog" aria-labelledby="modal-amnt-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge"><i class="fa-solid fa-atom"></i> Elsevier Research Paper • First Author</span>
+          <h2 class="modal-title" id="modal-amnt-title">Directional Transport of Molecular Nanomachines</h2>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Tabs Navigation -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="amnt-tab-overview">Abstract &amp; Highlights</button>
+        <button class="modal-tab-btn" data-tab="amnt-tab-methodology">MD Simulation Architecture</button>
+        <button class="modal-tab-btn" data-tab="amnt-tab-findings">Kinematics &amp; Findings</button>
+        <button class="modal-tab-btn" data-tab="amnt-tab-gallery">Figure Gallery</button>
+        <button class="modal-tab-btn" data-tab="amnt-tab-docs">Manuscript &amp; Citation</button>
+      </div>
+
+      <div class="modal-content-body">
+        <!-- Tab 1: Overview -->
+        <div class="modal-tab-pane active" id="amnt-tab-overview">
+          <h3>Abstract</h3>
+          <p class="modal-abstract-quote">
+            "Molecular nanomachines hold immense potential for applications in targeted drug delivery, molecular transport, and nanoscale manipulation; however, achieving precise directional control over their diffusive motion remains a significant challenge. While previous research has extensively examined substrate topography and wheel composition, the specific influence of continuous width gradients on nanomachine mobility across varying thermal conditions is not fully understood. This study employs classical molecular dynamics (MD) simulations to investigate the performance of diverse nanomachines—including Nanocar, Miller nanocar, Nanotruck, Angled Nanocar, Nano-cooper, and Nano-caterpillar—on bimetallic substrates featuring a uniform gold path (Zero Gradient, ZG) alongside positive (PG) and negative (NG) width-gradient gold paths on a silver base, evaluated from 75 K to 600 K. The results reveal that although elevated temperatures generally enhance mobility by driving the dynamic transition from sliding to rolling, uniform and positive gradient surfaces exhibit delayed transitions and substantial lateral deviations. In contrast, the negative gradient surface significantly improves directional stability, minimizes angular velocity, and facilitates long-range displacement through synergistic geometric confinement and optimized surface energetics."
+          </p>
+
+          <h3>Research Highlights</h3>
+          <ul class="highlights-checklist">
+            <li><i class="fa-solid fa-check"></i> Continuous negative width gradients rectify diffusive Brownian motion of diverse molecular nanomachines into directed, long-range transport.</li>
+            <li><i class="fa-solid fa-check"></i> Elevated thermal excitation accelerates the dynamical transition from atomic sliding to rolling locomotion.</li>
+            <li><i class="fa-solid fa-check"></i> Negative gradient tracks suppress parasitic angular velocity and eliminate lateral drift at elevated temperatures.</li>
+            <li><i class="fa-solid fa-check"></i> Structural flexibility confers superior mobility at cryogenic temperatures (75–150 K), whereas rigid architectures excel at high temperatures (400–600 K).</li>
+          </ul>
+        </div>
+
+        <!-- Tab 2: Simulation Architecture -->
+        <div class="modal-tab-pane" id="amnt-tab-methodology">
+          <h3>Simulation Setup &amp; Potentials</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Method / Potential</th>
+                <th>Physical Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Software Engine</td>
+                <td>LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)</td>
+                <td>High-performance parallel classical MD integration</td>
+              </tr>
+              <tr>
+                <td>Thermodynamic Ensemble</td>
+                <td>NVT Canonical Ensemble with Nosé-Hoover Thermostat</td>
+                <td>Target temperatures: 75 K, 150 K, 300 K, 400 K, 500 K, 600 K</td>
+              </tr>
+              <tr>
+                <td>Integrator &amp; Time Step</td>
+                <td>Velocity-Verlet algorithm with $\Delta t = 1.0\,\text{fs}$ ($0.001\,\text{ps}$)</td>
+                <td>$1.0\,\text{ns}$ production phase ($10^6$ integration steps)</td>
+              </tr>
+              <tr>
+                <td>Substrate Metallic Interactions</td>
+                <td>Embedded Atom Method (EAM) Alloy Potential</td>
+                <td>Accurately captures many-body energetics of Au/Ag FCC crystal lattice</td>
+              </tr>
+              <tr>
+                <td>Intramolecular Interactions</td>
+                <td>Molecular Mechanics (MM) + OPLS Dihedral Torsions</td>
+                <td>Harmonic bond stretching, angle bending, and torsional barrier energetics</td>
+              </tr>
+              <tr>
+                <td>Organic-Metal Interactions</td>
+                <td>Lennard-Jones (12-6) Potential with Arithmetic Mixing ($r_c = 13\,\text{Å}$)</td>
+                <td>Non-bonded van der Waals coupling between nanomachines and Au/Ag substrate</td>
+              </tr>
+              <tr>
+                <td>Substrate Geometries</td>
+                <td>Positive Gradient ($45^\circ$), Zero Gradient ($90^\circ$), Negative Gradient ($135^\circ$)</td>
+                <td>Gold track embedded on Silver base providing lateral confinement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 3: Findings -->
+        <div class="modal-tab-pane" id="amnt-tab-findings">
+          <h3>Evaluated Nanomachine Architectures</h3>
+          <p>Six distinct designs spanning chassis flexibilities, masses, and wheel configurations were modeled:</p>
+          <div class="nanocars-grid">
+            <div class="nano-card">
+              <h4>Nanocar</h4>
+              <p>Baseline four-wheel design featuring rigid axle connectivity and symmetric fullerene wheels.</p>
+            </div>
+            <div class="nano-card">
+              <h4>Miller Nanocar</h4>
+              <p>Flexible chassis architecture with rotational freedom around central covalent linkages.</p>
+            </div>
+            <div class="nano-card">
+              <h4>Nanotruck</h4>
+              <p>Higher mass, structurally reinforced chassis engineered for cargo transport capabilities.</p>
+            </div>
+            <div class="nano-card">
+              <h4>Angled Nanocar</h4>
+              <p>Asymmetric wheel inclination testing susceptibility to induced lateral torque.</p>
+            </div>
+            <div class="nano-card">
+              <h4>Nano-cooper</h4>
+              <p>Compact, rigid high-mobility chassis design with lowered center of mass.</p>
+            </div>
+            <div class="nano-card">
+              <h4>Nano-caterpillar</h4>
+              <p>Segmented multi-body architecture designed to navigate irregular surface potential barriers.</p>
+            </div>
+          </div>
+
+          <h3>Kinematic Rectification &amp; Trajectory Stability</h3>
+          <p>
+            On uniform (ZG) and diverging (PG) substrates, nanomachines undergo frequent lateral deviations, random reorientations, and erratic angular acceleration. In contrast, on the <strong>Negative Gradient (NG) substrate</strong>, the converging gold boundaries exert an energetic restoring force: as the vehicle approaches the silver boundary, the difference in interfacial adhesion energetically penalizes lateral escape, confining the nanomachine to smooth, unidirectionally oriented locomotion along the track axis.
+          </p>
+        </div>
+
+        <!-- Tab 4: Gallery -->
+        <div class="modal-tab-pane" id="amnt-tab-gallery">
+          <div class="modal-gallery-grid">
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/nanocars_schematic.png" alt="Nanocar Architectures" class="lightbox-trigger" data-caption="Architectural schematics of diverse molecular nanomachines evaluated on bimetallic substrates." />
+              <span>Nanocar Architectures</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/fullerenes_schematic.png" alt="Fullerenes Progression" class="lightbox-trigger" data-caption="Fullerene wheels evaluated in the simulations: C36 to C90." />
+              <span>Fullerene Wheels Progression</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/bimetallic_tracks.png" alt="Bimetallic Substrate Paths" class="lightbox-trigger" data-caption="Bimetallic gold paths on silver substrate: Zero Gradient, Positive Gradient, and Negative Gradient." />
+              <span>Bimetallic Substrate Paths</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/displacement.png" alt="Displacement vs Time" class="lightbox-trigger" data-caption="Center-of-mass trajectory displacement across thermal regimes." />
+              <span>Center-of-Mass Displacement</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/effective_velocities.png" alt="Effective Velocities" class="lightbox-trigger" data-caption="Effective directional transport velocities comparing ZG, PG, and NG surfaces." />
+              <span>Effective Velocities</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/amnt-project/angular_velocities.png" alt="Angular Velocities" class="lightbox-trigger" data-caption="Angular velocities showing suppression of parasitic spinning on Negative Gradient surfaces." />
+              <span>Angular Velocities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Manuscript & Citation -->
+        <div class="modal-tab-pane" id="amnt-tab-docs">
+          <h3>Full Manuscript</h3>
+          <div class="doc-download-cards">
+            <div class="doc-card">
+              <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Elsevier cas-dc Manuscript (PDF)</h4>
+                <p>Complete research article formatted for Elsevier, including all methodology equations, figures, trajectory data, and comprehensive reference citations.</p>
+                <a href="assets/docs/directional_nanomachine_transport_paper.pdf" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Manuscript (6.5 MB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h3>BibTeX Citation</h3>
+          <pre class="code-block"><code>@article{javadi2026directional,
+  title={Directional Transport and Geometric Confinement of Molecular Nanomachines on Bimetallic Width-Gradient Substrates},
+  author={Javadi, Keihan},
+  journal={Elsevier Applied Materials},
+  year={2026},
+  publisher={Elsevier}
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Lightbox for Enlarged Diagrams -->
+  <div class="lightbox-overlay" id="lightbox-overlay" aria-hidden="true">
+    <button class="lightbox-close-btn" aria-label="Close enlarged preview"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lightbox-container">
+      <img src="" alt="Enlarged diagram" id="lightbox-img" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copied Items -->
+  <div class="toast-notice" id="toast-notice" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-text">Copied to clipboard!</span>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <p class="copyright">
-        &copy; <span id="current-year"></span> Keihan Javadi. Hosted with GitHub Pages.
-      </p>
-      <a href="#hero" class="back-to-top" aria-label="Back to top" title="Scroll to top">
-        <i class="fa-solid fa-chevron-up"></i>
-      </a>
+      <div class="footer-brand">
+        <span class="logo-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+        <span class="logo-text">Keihan<strong>Javadi</strong></span>
+        <p class="footer-sub">Sharif University of Technology • Mechanical Engineering</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Competencies</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:Javadi.keihan@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Keihan Javadi. Hosted with GitHub Pages.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
