@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Keihan Javadi - Software Engineer & Developer Portfolio. Explore projects, technical skills, and experience." />
+  <meta name="author" content="Keihan Javadi" />
+  <meta name="theme-color" content="#0f172a" />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Keihan Javadi | Portfolio" />
+  <meta property="og:description" content="Software Engineer & Developer. Passionate about building elegant, scalable software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keihanjavadi.github.io/" />
+
+  <title>Keihan Javadi | Software Engineer & Developer</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Ambient Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="logo-code">&lt;</span>KJ<span class="logo-code"> /&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i class="fa-solid fa-moon theme-icon-dark"></i>
+          <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="hamburger-btn" class="icon-btn mobile-only" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars hamburger-icon"></i>
+          <i class="fa-solid fa-xmark close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span>Available for new opportunities &amp; collaborations</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Keihan Javadi</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Software Engineer &amp; Developer
+        </p>
+
+        <p class="hero-bio">
+          I design and build reliable, scalable software, intuitive web applications, and practical digital solutions. Dedicated to clean architecture, continuous learning, and great user experiences.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get in Touch</span>
+            <i class="fa-regular fa-paper-plane"></i>
+          </a>
+          <a href="mailto:javadi.keihan@gmail.com" class="btn btn-ghost" title="Send email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email Me</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+            <span>keihanjavadi</span>
+          </a>
+          <a href="mailto:javadi.keihan@gmail.com" class="social-link" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>javadi.keihan@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Get to know me</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="lead-text">
+              I am a passionate software developer who loves tackling complex problems and turning innovative ideas into robust, usable software.
+            </p>
+            <p>
+              My focus is on creating clean, efficient, and maintainable code. Whether building modern web applications, developing backend services, or exploring new technologies, I approach every challenge with curiosity, rigor, and a user-centered mindset.
+            </p>
+            <p>
+              Outside of coding, I'm constantly learning new frameworks, exploring open-source tools, and optimizing workflows to deliver high-quality digital experiences.
+            </p>
+          </div>
+
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3>Clean Architecture</h3>
+              <p>Committed to readable, maintainable, and well-structured codebases.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3>Full-Stack Mindset</h3>
+              <p>Bridging responsive frontend user experiences with robust backend logic.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3>Performance First</h3>
+              <p>Optimizing web performance, load times, and responsive accessibility.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3>Continuous Growth</h3>
+              <p>Always expanding my toolkit with modern industry tools and best practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technologies -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Tech Stack</p>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+        </div>
+
+        <div class="skills-wrapper">
+          <!-- Category 1: Languages -->
+          <div class="skill-category">
+            <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3 / SCSS</span>
+              <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
+              <span class="skill-tag"><i class="fa-solid fa-c"></i> C / C++</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Frameworks & Libraries -->
+          <div class="skill-category">
+            <h3 class="category-title"><i class="fa-solid fa-cubes"></i> Frameworks &amp; Web Tech</h3>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-brands fa-react"></i> React</span>
+              <span class="skill-tag"><i class="fa-brands fa-node"></i> Node.js</span>
+              <span class="skill-tag"><i class="fa-solid fa-server"></i> Express / REST APIs</span>
+              <span class="skill-tag"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+              <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & DevOps -->
+          <div class="skill-category">
+            <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Workflow</h3>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub &amp; Pages</span>
+              <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux / CLI</span>
+              <span class="skill-tag"><i class="fa-solid fa-terminal"></i> PowerShell / Bash</span>
+              <span class="skill-tag"><i class="fa-solid fa-bug"></i> Debugging &amp; Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Featured Work</p>
+          <h2 class="section-title">Projects Showcase</h2>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="tools">Tools &amp; Systems</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="web">
+            <div class="project-header">
+              <div class="project-folder-icon">
+                <i class="fa-regular fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/keihanjavadi/keihanjavadi.github.io" target="_blank" rel="noopener noreferrer" title="View Source on GitHub" class="icon-link">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://keihanjavadi.github.io" target="_blank" rel="noopener noreferrer" title="Open Live Site" class="icon-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Personal Developer Portfolio</h3>
+            <p class="project-desc">
+              A modern, high-performance static portfolio website deployed with GitHub Pages. Features dynamic theme switching, fluid mobile layout, and zero runtime dependencies.
+            </p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>GitHub Pages</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="web">
+            <div class="project-header">
+              <div class="project-folder-icon">
+                <i class="fa-regular fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" title="View GitHub" class="icon-link">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Full-Stack Web Application</h3>
+            <p class="project-desc">
+              An interactive web application featuring clean state management, modular RESTful APIs, secure user data handling, and an intuitive user interface.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Database</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="tools">
+            <div class="project-header">
+              <div class="project-folder-icon">
+                <i class="fa-regular fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" title="View GitHub" class="icon-link">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Developer Utilities &amp; Automation</h3>
+            <p class="project-desc">
+              A collection of scripts and automation utilities for streamlining developer workflows, file processing, and productivity enhancement.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>CLI</span>
+              <span>Automation</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-projects-box">
+          <p>Looking for more repositories and open source contributions?</p>
+          <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i>
+            <span>Visit my GitHub Profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Let's Connect</p>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Let's build something together</h3>
+            <p>
+              I am open to new career opportunities, interesting freelance projects, and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:javadi.keihan@gmail.com" class="contact-method-card">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <span class="method-value">javadi.keihan@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/keihanjavadi" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="method-details">
+                  <span class="method-label">GitHub</span>
+                  <span class="method-value">github.com/keihanjavadi</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Message Box -->
+          <div class="contact-card">
+            <h4>Send a Quick Note</h4>
+            <form id="contact-form" action="mailto:javadi.keihan@gmail.com" method="get" enctype="text/plain">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject" placeholder="Project collaboration / Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-body">Message</label>
+                <textarea id="contact-body" name="body" rows="4" placeholder="Hello Keihan, I would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Open in Email Client</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">
+        &copy; <span id="current-year"></span> Keihan Javadi. Hosted with GitHub Pages.
+      </p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top" title="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
