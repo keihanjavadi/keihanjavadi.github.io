@@ -436,17 +436,80 @@
         <!-- Filter tabs -->
         <div class="project-filters">
           <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="fluids">Fluid Dynamics &amp; CFD</button>
+          <button class="filter-btn" data-filter="fluids">Fluids &amp; CFD</button>
+          <button class="filter-btn" data-filter="fsi">FSI &amp; Multiphysics</button>
           <button class="filter-btn" data-filter="nano">Molecular Dynamics &amp; Nanotech</button>
           <button class="filter-btn" data-filter="cad">CAD &amp; 3D Fabrication</button>
         </div>
 
         <div class="projects-grid">
-          <!-- Card 1: Water Channel Rig -->
+          <!-- Card 1: Blood Flow in Blocked Artery CFD -->
+          <div class="project-card" data-category="fluids">
+            <div class="card-img-top">
+              <img src="assets/images/cfd-artery/cfd_artery_velocity_contour.png" alt="Blood Flow Velocity Contour in Stenosed Artery" class="lightbox-trigger" data-caption="ANSYS Fluent CFD: Blood flow velocity contour through a 20% stenosed carotid artery." />
+              <div class="card-category-badge">CFD &amp; Hemodynamics</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Blood Flow in a Blocked Artery (CFD Stenosis)</h3>
+              <p class="card-desc">
+                Investigated hemodynamics through a 20% stenosed carotid artery using ANSYS Fluent. Compared non-Newtonian blood rheology ($\mu = 0.043\,\text{Pa}\cdot\text{s}$) with Newtonian water ($\mu = 0.001\,\text{Pa}\cdot\text{s}$), calculating wall shear stress (WSS), pressure drop across the throat, and recirculating vortex separation.
+              </p>
+              <div class="tech-stack-pills">
+                <span>ANSYS Fluent</span>
+                <span>Navier-Stokes</span>
+                <span>Hemodynamics</span>
+                <span>Structured Meshing</span>
+                <span>Coupled Solver</span>
+              </div>
+              <div class="card-footer-links">
+                <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between;">
+                  <button class="btn btn-sm btn-primary open-modal-btn" data-modal="modal-cfd-artery">
+                    <i class="fa-solid fa-binoculars"></i> Deep Dive
+                  </button>
+                  <a href="assets/docs/blood_flow_blocked_artery_cfd.pdf" target="_blank" class="card-link">
+                    <i class="fa-solid fa-file-pdf"></i> Report PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Two-Way FSI COMSOL Multiphysics -->
+          <div class="project-card" data-category="fsi">
+            <div class="card-img-top">
+              <img src="assets/images/fsi-comsol/fsi_comsol_deformation.png" alt="Two-Way FSI Elastic Bar Deformation in Channel Flow" class="lightbox-trigger" data-caption="COMSOL Multiphysics: Two-way fluid-structure interaction showing stress and velocity deformation fields." />
+              <div class="card-category-badge">Two-Way FSI</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Two-Way Fluid-Structure Interaction (COMSOL)</h3>
+              <p class="card-desc">
+                Fully coupled Two-Way FSI simulation of a flexible elastic beam ($L=3\,\text{cm}, t=0.2\,\text{cm}$) in a 2D channel using COMSOL Multiphysics. Evaluated Arbitrary Lagrangian-Eulerian (ALE) moving mesh and Quartic Lagrange displacement fields across Young's Moduli ($10^6{-}10^8\,\text{Pa}$) and inflow velocities ($0.01{-}0.8\,\text{m/s}$).
+              </p>
+              <div class="tech-stack-pills">
+                <span>COMSOL Multiphysics</span>
+                <span>Two-Way FSI</span>
+                <span>ALE Moving Mesh</span>
+                <span>Quartic Lagrange</span>
+                <span>Non-Linear Elasticity</span>
+              </div>
+              <div class="card-footer-links">
+                <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between;">
+                  <button class="btn btn-sm btn-primary open-modal-btn" data-modal="modal-fsi-comsol">
+                    <i class="fa-solid fa-binoculars"></i> Deep Dive
+                  </button>
+                  <a href="assets/docs/fluid_structure_interaction_comsol.pdf" target="_blank" class="card-link">
+                    <i class="fa-solid fa-file-pdf"></i> Report PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Water Channel Rig -->
           <div class="project-card" data-category="fluids">
             <div class="card-img-top">
               <img src="assets/images/bachelor-project/setup_photo_labeled.png" alt="Experimental Flow Channel Rig" class="lightbox-trigger" data-caption="Fabricated acrylic water channel test facility with differential manometry." />
-              <div class="card-category-badge">Fluid Dynamics</div>
+              <div class="card-category-badge">Experimental Fluids</div>
             </div>
             <div class="card-body">
               <h3 class="card-title">Precision Rectangular Water Channel Test Loop</h3>
@@ -465,7 +528,7 @@
             </div>
           </div>
 
-          <!-- Card 2: 16K SLA 3D Printing -->
+          <!-- Card 4: 16K SLA 3D Printing -->
           <div class="project-card" data-category="cad">
             <div class="card-img-top">
               <img src="assets/images/bachelor-project/microgroove_profiles.png" alt="OpenSCAD Parametric Microgrooves" class="lightbox-trigger" data-caption="Parametric OpenSCAD microgroove models printed via 16K SLA." />
@@ -488,7 +551,7 @@
             </div>
           </div>
 
-          <!-- Card 3: Molecular Nanocar Simulations -->
+          <!-- Card 5: Molecular Nanocar Simulations -->
           <div class="project-card" data-category="nano">
             <div class="card-img-top">
               <img src="assets/images/amnt-project/fullerenes_schematic.png" alt="Fullerene Nanomachine Wheels" class="lightbox-trigger" data-caption="Molecular modeling of fullerene wheels and bimetallic interfaces." />
@@ -511,7 +574,7 @@
             </div>
           </div>
 
-          <!-- Card 4: Goniometric Wettability & Hydrophobic Transitions -->
+          <!-- Card 6: Goniometric Wettability & Hydrophobic Transitions -->
           <div class="project-card" data-category="fluids">
             <div class="card-img-top">
               <img src="assets/images/bachelor-project/contact_angle_rect.png" alt="Sessile Drop Goniometer" class="lightbox-trigger" data-caption="Contact angle goniometry demonstrating Cassie-Baxter state on rectangular grooves." />
@@ -542,11 +605,11 @@
       <div class="container">
         <div class="section-header">
           <p class="section-tag"><i class="fa-solid fa-scroll"></i> Academic Output</p>
-          <h2 class="section-title">Publications &amp; Theses</h2>
+          <h2 class="section-title">Publications, Theses &amp; Technical Reports</h2>
         </div>
 
         <div class="publications-list">
-          <!-- Publication 1 -->
+          <!-- Publication 1: Elsevier Paper -->
           <div class="pub-card">
             <div class="pub-status-badge badge-submitted">
               <i class="fa-solid fa-clock-rotate-left"></i> Submitted / Under Review
@@ -576,7 +639,7 @@
             </div>
           </div>
 
-          <!-- Publication 2 -->
+          <!-- Publication 2: Sharif Bachelor Thesis -->
           <div class="pub-card">
             <div class="pub-status-badge badge-completed">
               <i class="fa-solid fa-check"></i> Defended &amp; Approved
@@ -612,6 +675,74 @@
               </button>
             </div>
           </div>
+
+          <!-- Publication 3: CFD Artery Project -->
+          <div class="pub-card">
+            <div class="pub-status-badge badge-completed">
+              <i class="fa-solid fa-check"></i> Academic Project Report
+            </div>
+            <h3 class="pub-title">Blood Flow in a Blocked Artery: Computational Fluid Dynamics Analysis of Carotid Stenosis</h3>
+            <p class="pub-authors">
+              <strong>Keihan Javadi</strong> • <strong>Mehrsa Tajik</strong>
+            </p>
+            <p class="pub-venue">
+              <em>Computational Fluid Dynamics, Department of Mechanical Engineering, Sharif University of Technology (June 2025).</em>
+            </p>
+            <p class="pub-summary">
+              Comprehensive numerical simulation of hemodynamic flow in a 20% stenosed carotid artery with ANSYS Fluent. Evaluates Navier-Stokes solutions under non-Newtonian blood vs water, analyzing wall shear rate, pressure drop ($\Delta P = 63.3\,\text{Pa}$ vs $1.86\,\text{Pa}$), and recirculation zones.
+            </p>
+            <div class="pub-actions">
+              <a href="assets/docs/blood_flow_blocked_artery_cfd.pdf" target="_blank" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-file-pdf"></i> Read CFD Report
+              </a>
+              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-cfd-artery">
+                <i class="fa-solid fa-binoculars"></i> Technical Summary
+              </button>
+              <button class="btn btn-sm btn-outline copy-bibtex-btn" data-bibtex="@techreport{javadi2025bloodflow,
+  title={Blood Flow in a Blocked Artery: Computational Fluid Dynamics Analysis},
+  author={Javadi, Keihan and Tajik, Mehrsa},
+  institution={Sharif University of Technology, Department of Mechanical Engineering},
+  year={2025},
+  month={June}
+}">
+                <i class="fa-regular fa-copy"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+
+          <!-- Publication 4: Two-Way FSI Project -->
+          <div class="pub-card">
+            <div class="pub-status-badge badge-completed">
+              <i class="fa-solid fa-check"></i> Academic Project Report
+            </div>
+            <h3 class="pub-title">Two-Way Fluid-Structure Interaction of a Flexible Obstacle in Rectangular Channel Flow</h3>
+            <p class="pub-authors">
+              <strong>Keihan Javadi</strong>
+            </p>
+            <p class="pub-venue">
+              <em>Finite Element Method for Fluids, Department of Mechanical Engineering, Sharif University of Technology (January 2025).</em>
+            </p>
+            <p class="pub-summary">
+              Finite element investigation of two-way coupled FSI in COMSOL Multiphysics. Evaluates elastic cantilever beam deflection in a laminar channel using Arbitrary Lagrangian-Eulerian (ALE) moving mesh and Quartic Lagrange displacement fields across Young's Moduli ($10^6{-}10^8\,\text{Pa}$) and inflow velocities ($0.01{-}0.8\,\text{m/s}$).
+            </p>
+            <div class="pub-actions">
+              <a href="assets/docs/fluid_structure_interaction_comsol.pdf" target="_blank" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-file-pdf"></i> Read FSI Report
+              </a>
+              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-fsi-comsol">
+                <i class="fa-solid fa-binoculars"></i> Technical Summary
+              </button>
+              <button class="btn btn-sm btn-outline copy-bibtex-btn" data-bibtex="@techreport{javadi2025fsi,
+  title={Two-Way Fluid-Structure Interaction of a Flexible Obstacle in Rectangular Channel Flow},
+  author={Javadi, Keihan},
+  institution={Sharif University of Technology, Department of Mechanical Engineering},
+  year={2025},
+  month={January}
+}">
+                <i class="fa-regular fa-copy"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -629,15 +760,15 @@
           <div class="skill-box">
             <div class="skill-box-header">
               <div class="skill-box-icon"><i class="fa-solid fa-water"></i></div>
-              <h3>Fluid Mechanics &amp; Turbulence</h3>
+              <h3>Fluid Mechanics &amp; CFD</h3>
             </div>
             <ul class="skill-items-list">
-              <li><i class="fa-solid fa-chevron-right"></i> Wall-Bounded Turbulence &amp; Boundary Layer Dynamics</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Near-Wall Coherent Structures (Quasi-Streamwise Vortices, Ejections/Sweeps)</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Viscous Sublayer Scaling ($\delta_v = 5\nu/u_\tau, h^+ < 5$)</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Channel &amp; Internal Duct Flow Hydraulic Calculations</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Differential Pressure Manometry &amp; Flow Calibration</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Sessile Drop Goniometry &amp; Cassie-Baxter Wetting</li>
+              <li><i class="fa-solid fa-chevron-right"></i> ANSYS Fluent (Navier-Stokes, Coupled/SIMPLE, Structured Meshing)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Hemodynamics, Non-Newtonian Blood Rheology &amp; Stenosis Modeling</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Wall-Bounded Turbulence &amp; Coherent Structures (Quasi-Streamwise Vortices)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Viscous Sublayer Scaling ($\delta_v = 5\nu/u_\tau, h^+ < 5$) &amp; Riblets</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Channel Flow Rig Instrumentation &amp; Differential Manometry</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Sessile Drop Goniometry &amp; Cassie-Baxter Superhydrophobic Wetting</li>
             </ul>
           </div>
 
@@ -657,19 +788,19 @@
             </ul>
           </div>
 
-          <!-- Domain 3: CAD & Precision Manufacturing -->
+          <!-- Domain 3: Multiphysics, CAD & 3D Printing -->
           <div class="skill-box">
             <div class="skill-box-header">
               <div class="skill-box-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-              <h3>CAD &amp; Precision Manufacturing</h3>
+              <h3>Multiphysics, CAD &amp; Fabrication</h3>
             </div>
             <ul class="skill-items-list">
+              <li><i class="fa-solid fa-chevron-right"></i> COMSOL Multiphysics (Two-Way Coupled Fluid-Structure Interaction)</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Arbitrary Lagrangian-Eulerian (ALE) Moving Mesh &amp; Quartic Lagrange</li>
               <li><i class="fa-solid fa-chevron-right"></i> SolidWorks (3D Part Modeling, Complex Assembly, GD&amp;T Drawings)</li>
               <li><i class="fa-solid fa-chevron-right"></i> OpenSCAD (Parametric Mathematical Geometry Generation)</li>
               <li><i class="fa-solid fa-chevron-right"></i> High-Resolution 16K SLA Photopolymer 3D Printing ($19\times24\,\mu\text{m}$)</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Meshmixer (Mesh Repair, Slicing, Surface Optimization)</li>
               <li><i class="fa-solid fa-chevron-right"></i> Fluidic Rig Prototyping (Acrylic Channel Fabrication, O-Ring Sealing)</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Biomimetic Geometry Synthesis (Shark Denticle Arrays)</li>
             </ul>
           </div>
 
@@ -1207,6 +1338,410 @@
   journal={Elsevier Applied Materials},
   year={2026},
   publisher={Elsevier}
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Deep Dive Modal: CFD Artery Stenosis -->
+  <div class="modal-backdrop" id="modal-cfd-artery" aria-hidden="true" role="dialog" aria-labelledby="modal-cfd-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge"><i class="fa-solid fa-heart-pulse"></i> Sharif University of Technology • CFD Project</span>
+          <h2 class="modal-title" id="modal-cfd-title">Blood Flow in a Blocked Artery (Stenosis Analysis)</h2>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Tabs Navigation -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="cfd-tab-overview">Overview &amp; Problem</button>
+        <button class="modal-tab-btn" data-tab="cfd-tab-equations">Governing Physics &amp; Solver</button>
+        <button class="modal-tab-btn" data-tab="cfd-tab-results">Blood vs. Water Analysis</button>
+        <button class="modal-tab-btn" data-tab="cfd-tab-gallery">Contours &amp; Meshing</button>
+        <button class="modal-tab-btn" data-tab="cfd-tab-docs">Report &amp; Citation</button>
+      </div>
+
+      <div class="modal-content-body">
+        <!-- Tab 1: Overview -->
+        <div class="modal-tab-pane active" id="cfd-tab-overview">
+          <h3>Clinical &amp; Biomechanical Background</h3>
+          <p>
+            Carotid artery stenosis occurs when atherosclerotic plaque deposits construct a localized narrowing in the cerebral blood vessels, significantly increasing the probability of ischemic stroke. Accurately modeling hemodynamic shear stress, dynamic pressure gradients, and recirculation zones provides vital diagnostic criteria for evaluating plaque vulnerability and thrombus formation.
+          </p>
+          <div class="modal-stats-grid">
+            <div class="modal-stat-card">
+              <span class="m-val">20%</span>
+              <span class="m-lbl">Stenosis Blockage Ratio ($R_{vo}$)</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">63.3 Pa</span>
+              <span class="m-lbl">Blood Pressure Drop ($\Delta P$)</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">156 s⁻¹</span>
+              <span class="m-lbl">Throat Peak Shear Rate ($\dot{\gamma}$)</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">ANSYS Fluent</span>
+              <span class="m-lbl">Coupled Navier-Stokes Solver</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Equations & Solver -->
+        <div class="modal-tab-pane" id="cfd-tab-equations">
+          <h3>Governing Navier-Stokes Equations &amp; Shear Rates</h3>
+          <p>
+            The steady, 2D incompressible laminar momentum equations governing hemodynamic transport are:
+          </p>
+          <div class="math-callout">
+            $$\rho \left( u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} \right) = -\frac{\partial p}{\partial x} + \mu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)$$
+          </div>
+          <p>
+            Analytical shear rates were evaluated across the domain:
+          </p>
+          <ul class="highlights-checklist">
+            <li><strong>At the Inlet ($R_0 = 5\,\text{mm}$):</strong> $\dot{\gamma}_{\text{inlet}} = \frac{4 V_{\text{in}}}{R_0} = \frac{4 \times 0.1}{0.005} = \mathbf{80\,\text{s}^{-1}}$</li>
+            <li><strong>At the Stenosed Throat ($R_{\text{throat}} = 4\,\text{mm}$):</strong> Conservation of mass yields $V_{\text{throat}} = 0.156\,\text{m/s}$, resulting in $\dot{\gamma}_{\text{throat}} = \mathbf{156.25\,\text{s}^{-1}}$ (nearly double the nominal baseline).</li>
+          </ul>
+
+          <h3>Numerical Solver Benchmarking</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Scheme Tested</th>
+                <th>Iteration Count to Convergence</th>
+                <th>Continuity Residual</th>
+                <th>Stability Assessment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Coupled + 2nd-Order Upwind</strong></td>
+                <td><strong>38 Iterations</strong></td>
+                <td><strong>1.8 × 10⁻⁵</strong></td>
+                <td><strong>Fastest &amp; Most Robust (Adopted)</strong></td>
+              </tr>
+              <tr>
+                <td>SIMPLE + 2nd-Order Upwind</td>
+                <td>145 Iterations</td>
+                <td>3.2 × 10⁻⁵</td>
+                <td>Standard baseline</td>
+              </tr>
+              <tr>
+                <td>PISO + 2nd-Order Upwind</td>
+                <td>82 Iterations</td>
+                <td>2.1 × 10⁻⁵</td>
+                <td>Good convergence</td>
+              </tr>
+              <tr>
+                <td>SIMPLEC + 2nd-Order Upwind</td>
+                <td>110 Iterations</td>
+                <td>2.9 × 10⁻⁵</td>
+                <td>Moderate rate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 3: Results -->
+        <div class="modal-tab-pane" id="cfd-tab-results">
+          <h3>Blood vs. Water Hemodynamic Comparison</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Fluid Property / Result</th>
+                <th>Blood (Non-Newtonian Rheology)</th>
+                <th>Water (Reference Fluid)</th>
+                <th>Physical Ratio / Implication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Density ($\rho$)</td>
+                <td>$1063\,\text{kg/m}^3$</td>
+                <td>$998.2\,\text{kg/m}^3$</td>
+                <td>+6.5% higher mass inertia in blood</td>
+              </tr>
+              <tr>
+                <td>Dynamic Viscosity ($\mu$)</td>
+                <td>$0.043\,\text{Pa}\cdot\text{s}$ ($43\,\text{cP}$)</td>
+                <td>$0.001003\,\text{Pa}\cdot\text{s}$ ($1\,\text{cP}$)</td>
+                <td>~43× higher viscous resistance in blood</td>
+              </tr>
+              <tr>
+                <td>Throat Peak Velocity</td>
+                <td>$0.312\,\text{m/s}$</td>
+                <td>$0.298\,\text{m/s}$</td>
+                <td>Intense jet acceleration across constriction</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Total Pressure Drop ($\Delta P$)</strong></td>
+                <td><strong>63.32 Pa</strong></td>
+                <td><strong>1.86 Pa</strong></td>
+                <td><strong>~34× greater pressure load required for blood</strong></td>
+              </tr>
+              <tr>
+                <td>Recirculation Bubble Length</td>
+                <td>Suppressed by high viscosity</td>
+                <td>Extended downstream detachment</td>
+                <td>Lower Reynolds number dampens separation wake in blood</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 4: Gallery -->
+        <div class="modal-tab-pane" id="cfd-tab-gallery">
+          <div class="modal-gallery-grid">
+            <div class="modal-gallery-item">
+              <img src="assets/images/cfd-artery/cfd_artery_velocity_contour.png" alt="Velocity Contour in Stenosed Artery" class="lightbox-trigger" data-caption="Velocity magnitude contour showing high-velocity jet acceleration through the throat and post-stenotic deceleration." />
+              <span>Velocity Contour (Blood)</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/cfd-artery/cfd_artery_pressure_contour.png" alt="Static Pressure Contour" class="lightbox-trigger" data-caption="Static pressure distribution illustrating the steep adverse pressure gradient and localized recovery." />
+              <span>Static Pressure Contour</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/cfd-artery/cfd_artery_mesh.png" alt="Structured Inflation Meshing" class="lightbox-trigger" data-caption="Structured quadrilateral mesh with refined inflation boundary layers resolving wall shear stress gradients." />
+              <span>Structured Inflation Mesh</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/cfd-artery/cfd_artery_geometry.png" alt="Artery Geometry & Stenosis Dimensions" class="lightbox-trigger" data-caption="Computational domain geometry: 20% diameter reduction at the throat center (X/L = 0.5)." />
+              <span>Stenosis Domain Geometry</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Report & Citation -->
+        <div class="modal-tab-pane" id="cfd-tab-docs">
+          <h3>Complete Technical Project Report</h3>
+          <div class="doc-download-cards">
+            <div class="doc-card">
+              <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>CFD Project 3 Technical Report (PDF)</h4>
+                <p>Full 19-page technical investigation including theoretical derivations, mesh convergence checks, convergence residuals, and blood-water comparative fluid dynamics.</p>
+                <a href="assets/docs/blood_flow_blocked_artery_cfd.pdf" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Report (406 KB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h3>BibTeX Citation</h3>
+          <pre class="code-block"><code>@techreport{javadi2025bloodflow,
+  title={Blood Flow in a Blocked Artery: Computational Fluid Dynamics Analysis of Carotid Stenosis},
+  author={Javadi, Keihan and Tajik, Mehrsa},
+  institution={Sharif University of Technology, Department of Mechanical Engineering},
+  address={Tehran, Iran},
+  year={2025},
+  month={June}
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Deep Dive Modal: COMSOL Two-Way FSI -->
+  <div class="modal-backdrop" id="modal-fsi-comsol" aria-hidden="true" role="dialog" aria-labelledby="modal-fsi-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge"><i class="fa-solid fa-arrows-split-up-and-left"></i> Sharif University of Technology • FSI Project</span>
+          <h2 class="modal-title" id="modal-fsi-title">Two-Way Fluid-Structure Interaction (COMSOL Multiphysics)</h2>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Tabs Navigation -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="fsi-tab-overview">Project Outline</button>
+        <button class="modal-tab-btn" data-tab="fsi-tab-setup">COMSOL Setup &amp; ALE Mesh</button>
+        <button class="modal-tab-btn" data-tab="fsi-tab-results">Parametric Sweep Results</button>
+        <button class="modal-tab-btn" data-tab="fsi-tab-gallery">Deformation &amp; Stress Plots</button>
+        <button class="modal-tab-btn" data-tab="fsi-tab-docs">Report &amp; Citation</button>
+      </div>
+
+      <div class="modal-content-body">
+        <!-- Tab 1: Overview -->
+        <div class="modal-tab-pane active" id="fsi-tab-overview">
+          <h3>Coupled Multiphysics Motivation</h3>
+          <p>
+            In many biomedical and microfluidic applications, fluid flow exerts substantial surface traction on flexible structures, which in turn deform and alter the fluid flow path. This investigation implemented a rigorous <strong>Two-Way Fluid-Structure Interaction (FSI)</strong> model in <strong>COMSOL Multiphysics</strong> to compute the dynamic mutual response between a laminar channel flow and an elastic cantilever bar.
+          </p>
+          <div class="modal-stats-grid">
+            <div class="modal-stat-card">
+              <span class="m-val">Two-Way</span>
+              <span class="m-lbl">Bidirectional Momentum Coupling</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">ALE</span>
+              <span class="m-lbl">Arbitrary Lagrangian-Eulerian Mesh</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">Quartic</span>
+              <span class="m-lbl">Lagrange Element Discretization ($p=4$)</span>
+            </div>
+            <div class="modal-stat-card">
+              <span class="m-val">9 Cases</span>
+              <span class="m-lbl">Parametric Modulus &amp; Velocity Sweep</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: COMSOL Setup -->
+        <div class="modal-tab-pane" id="fsi-tab-setup">
+          <h3>Simulation Geometry &amp; Multiphysics Architecture</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Subsystem</th>
+                <th>Selected Settings &amp; Values</th>
+                <th>Design Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Channel Dimensions</td>
+                <td>Height: $20\,\text{cm}$, Width: $5\,\text{cm}$</td>
+                <td>2D rectangular duct section</td>
+              </tr>
+              <tr>
+                <td>Flexible Bar Obstacle</td>
+                <td>Length: $3\,\text{cm}$, Thickness: $0.2\,\text{cm}$ with rounded fillet tips</td>
+                <td>Filleted tip eliminates singular geometric stress concentrations</td>
+              </tr>
+              <tr>
+                <td>Fluid Properties</td>
+                <td>Water ($\rho = 1000\,\text{kg/m}^3, \mu = 0.001\,\text{Pa}\cdot\text{s}$)</td>
+                <td>Inflow velocities evaluated: $0.01, 0.5, 0.8\,\text{m/s}$</td>
+              </tr>
+              <tr>
+                <td>Structural Mechanics</td>
+                <td>Linear Elastic Material (Isotropic), $\nu = 0.33$</td>
+                <td>Young's Moduli swept: $10^6, 10^7, 10^8\,\text{Pa}$</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Discretization Field</strong></td>
+                <td><strong>Quartic Lagrange ($p=4$)</strong></td>
+                <td><strong>Eliminates severe mesh-inversion non-convergence of linear elements</strong></td>
+              </tr>
+              <tr>
+                <td>Mesh Motion</td>
+                <td>Arbitrary Lagrangian-Eulerian (ALE) Deforming Mesh</td>
+                <td>Accommodates large structural tip deflection within fluid domain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 3: Results -->
+        <div class="modal-tab-pane" id="fsi-tab-results">
+          <h3>Parametric Deflection &amp; Stress Findings</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Young's Modulus ($E$)</th>
+                <th>Inflow Velocity ($v$)</th>
+                <th>Tip Deflection ($\delta$)</th>
+                <th>Dynamic Interaction Behavior</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td>Case 1.3</td>
+                <td>$10^6\,\text{Pa}$ (Highly Flexible)</td>
+                <td>$0.8\,\text{m/s}$</td>
+                <td>Maximum Deflection</td>
+                <td>Extreme cantilever bending, heavy flow deflection into opposite bypass channel</td>
+              </tr>
+              <tr>
+                <td>Case 1.2</td>
+                <td>$10^6\,\text{Pa}$</td>
+                <td>$0.5\,\text{m/s}$</td>
+                <td>Moderate-Large</td>
+                <td>Clear non-linear elastic bending profile</td>
+              </tr>
+              <tr>
+                <td>Case 1.1</td>
+                <td>$10^6\,\text{Pa}$</td>
+                <td>$0.01\,\text{m/s}$</td>
+                <td>Sub-millimeter</td>
+                <td>Linear regime deflection</td>
+              </tr>
+              <tr>
+                <td>Case 2.3</td>
+                <td>$10^7\,\text{Pa}$ (Intermediate)</td>
+                <td>$0.8\,\text{m/s}$</td>
+                <td>Noticeable deflection</td>
+                <td>Balanced resistance, smooth wake formation</td>
+              </tr>
+              <tr>
+                <td>Case 3.3</td>
+                <td>$10^8\,\text{Pa}$ (Stiff)</td>
+                <td>$0.8\,\text{m/s}$</td>
+                <td>Near-Zero Deflection</td>
+                <td>Behaves like rigid bluff body, generating symmetric stagnation flow</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 4: Gallery -->
+        <div class="modal-tab-pane" id="fsi-tab-gallery">
+          <div class="modal-gallery-grid">
+            <div class="modal-gallery-item">
+              <img src="assets/images/fsi-comsol/fsi_comsol_deformation.png" alt="Two-Way FSI Deformation Plot" class="lightbox-trigger" data-caption="COMSOL Multiphysics: Coupled fluid velocity field and structural displacement under moderate inflow velocity." />
+              <span>FSI Velocity &amp; Displacement Field</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/fsi-comsol/fsi_comsol_high_speed.png" alt="High Speed FSI Deflection" class="lightbox-trigger" data-caption="Large-deflection regime showing maximum tip curvature and fluid channel narrowing around the obstacle." />
+              <span>High-Deflection Elastic Regime</span>
+            </div>
+            <div class="modal-gallery-item">
+              <img src="assets/images/fsi-comsol/fsi_comsol_mesh.png" alt="COMSOL Moving Mesh" class="lightbox-trigger" data-caption="Deforming boundary layer mesh accommodating cantilever displacement." />
+              <span>COMSOL Moving Mesh (ALE)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Report & Citation -->
+        <div class="modal-tab-pane" id="fsi-tab-docs">
+          <h3>Complete Technical Project Report</h3>
+          <div class="doc-download-cards">
+            <div class="doc-card">
+              <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Fluid-Structure Interaction Technical Report (PDF)</h4>
+                <p>Full 17-page finite element multiphysics investigation covering boundary conditions, ALE formulation, Quartic Lagrange selection, and 9 parametric test cases.</p>
+                <a href="assets/docs/fluid_structure_interaction_comsol.pdf" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Report (1.2 MB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h3>BibTeX Citation</h3>
+          <pre class="code-block"><code>@techreport{javadi2025fsi,
+  title={Two-Way Fluid-Structure Interaction of a Flexible Obstacle in Rectangular Channel Flow},
+  author={Javadi, Keihan},
+  institution={Sharif University of Technology, Department of Mechanical Engineering},
+  address={Tehran, Iran},
+  year={2025},
+  month={January}
 }</code></pre>
         </div>
       </div>
